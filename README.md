@@ -33,7 +33,7 @@ You need `PostGRESQL >= 9.1` and `Python 2.7` installed in your system.
 
 - Run tests for the scripts:
 
-`python tournament_test.py`
+`$ python tournament_test.py`
 
 - Check what got stored in the database, from your command line:
 
