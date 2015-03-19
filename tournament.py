@@ -4,7 +4,6 @@
 #
 
 import psycopg2
-from contextlib import closing
 
 
 def connect():
