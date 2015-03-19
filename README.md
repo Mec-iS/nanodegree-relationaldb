@@ -9,43 +9,46 @@ You can assume that the number of players in a tournament is an even number. Thi
 
 The database schema is in `tournament.sql`. Python code is in `tournament.py`. Tests are in `tournament_test.py`.
 
+
 ### Building the DB:
 
 You need `PostGRESQL >= 9.1` and `Python 2.7` installed in your system.
 
 
-Install `psycopg2` in your Python interpreter:
+- Install `psycopg2` in your Python interpreter:
 
-`pip install psycopg2`
+`$ pip install psycopg2`
 
-Git clone this repository:
+- Git clone this repository:
 
-`git clone https://github.com/Mec-iS/nanodegree-relationaldb`
+`$ git clone https://github.com/Mec-iS/nanodegree-relationaldb`
 
-Connect to your PostGRE instance from the directory where the repo got cloned:
+- Connect to your PostGRE instance from the directory where the repo got cloned:
 
-`psql`
+`$ psql`
 
-Run database schema creation:
+- Run database schema creation:
 
-`\i tournament.sql`
+`$ db=> \i tournament.sql`
 
-Run tests for the scripts:
+- Run tests for the scripts:
 
 `python tournament_test.py`
 
-Check what got stored in the database:
+- Check what got stored in the database, from your command line:
 
-```
-psql
-\c tournament
-```
+`$ psql` 
 
-Then
+- From the PostGRE command line
 
-`SELECT * FROM players;`
+`$ db=> \c tournament`
 
-and
 
-`SELECT * FROM matches;`
+- Then
+
+`$ tournament=> SELECT * FROM players;`
+
+- and
+
+`$ tournament=> SELECT * FROM matches;`
 
