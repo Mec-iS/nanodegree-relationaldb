@@ -26,7 +26,8 @@ CREATE VIEW player_w_l
    AS SELECT players.id, players.name, 
          (SELECT count(*) FROM matches WHERE win_id=players.id) as win,
          (SELECT count(*) FROM matches WHERE loss_id=players.id) as loss
-         FROM players, matches GROUP BY players.id;
+         FROM players, matches 
+         GROUP BY players.id;
 
 
 

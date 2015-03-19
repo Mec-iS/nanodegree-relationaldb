@@ -97,14 +97,13 @@ def playerStandings():
     players = cur.fetchall()
     results = []
     for p in players:
-        p_id = p[0]
         SQL = "SELECT count(*) FROM matches where win_id=%s"
-        cur.execute(SQL, (p_id,))
+        cur.execute(SQL, (p[0],))
         w = cur.fetchone()
         SQL = "SELECT count(*) FROM matches where loss_id=%s"
-        cur.execute(SQL, (p_id,))
+        cur.execute(SQL, (p[0],))
         l = cur.fetchone()
-        results.append((p_id, p[1], int(w[0]), int(w[0])+int(l[0])))
+        results.append((p[0], p[1], int(w[0]), int(w[0])+int(l[0])))
 
     cur.close()
     conn.close()
@@ -148,6 +147,7 @@ def swissPairings():
     """
     conn = connect()
     cur = conn.cursor()
+    # use the W/L view to define the pairs
     p_SQL = "SELECT * FROM player_w_l;"
     cur.execute(p_SQL)
     players = cur.fetchall()
