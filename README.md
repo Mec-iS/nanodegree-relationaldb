@@ -3,9 +3,9 @@
 ## Project 2: SQL database with PostGRE
 Designing and implementing, with PostGRE SQL and Python, a database to handle a round-robin tournament with Swiss-pairing:
 
-<quote>The goal of the Swiss pairings system is to pair each player with an opponent who has won the same number of matches, or as close as possible.
-
-You can assume that the number of players in a tournament is an even number. This means that no player will be left out of a round.</quote>
+>The goal of the Swiss pairings system is to pair each player with an opponent who has won the same number of matches, or as close as possible.
+>
+>You can assume that the number of players in a tournament is an even number. This means that no player will be left out of a round.
 
 The database schema is in `tournament.sql`. Python code is in `tournament.py`. Tests are in `tournament_test.py`.
 
